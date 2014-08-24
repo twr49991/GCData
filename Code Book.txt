@@ -1,0 +1,67 @@
+Data Dictionary for tidySummary.txt
+
+Subject - this is a character column of length 1 or 2 that provides the ID of the subject for whom the measurements were taken
+Activity - this is a character column describing the activity that was being performed by the subject whene the measurements were taken
+
+The remaining columns in the dataset are the mean (by subject and activity) of the mean and standard deviation columns in the original dataset. (See readme for more information.)
+
+From the features_info.txt file that accompanied the original dataset:
+"The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions."
+
+
+
+tBodyAccMeanX - mean of tBodyAccMeanX by subject and activity
+tBodyAccMeanY - mean of tBodyAccMeanY by subject and activity    
+tBodyAccMeanZ - mean of tBodyAccMeanZ by subject and activity   
+tBodyAccStdX  - mean of tBodyAccStdX by subject and activity    
+tBodyAccStdY  - mean of tBodyAccStdY by subject and activity      
+tBodyAccStdZ  - mean of tBodyAccStdZ by subject and activity   
+tGravityAccMeanX  - mean of tGravityAccMeanX by subject and activity  
+tGravityAccMeanY  - mean of tBodyAccStdY by subject and activity 
+tGravityAccMeanZ  - mean of tBodyAccStdZ by subject and activity  
+tGravityAccStdX  - mean of tGravityAccStdX by subject and activity  
+tGravityAccStdY  - mean of tGravityAccStdY by subject and activity  
+tGravityAccStdZ  - mean of tGravityAccStdZ by subject and activity  
+tBodyAccJerkMeanX - mean of tBodyAccJerkMeanX by subject and activity
+tBodyAccJerkMeanY - mean of tBodyAccJerkMeanY by subject and activity
+tBodyAccJerkMeanZ - mean of tBodyAccJerkMeanZ by subject and activity
+tBodyAccJerkStdX  - mean of tBodyAccJerkStdX by subject and activity 
+tBodyAccJerkStdY  - mean of tBodyAccJerkStdY by subject and activity  
+tBodyAccJerkStdZ  - mean of tBodyAccJerkStdZ by subject and activity 
+tBodyGyroMeanX  - mean of tBodyGyroMeanX by subject and activity    
+tBodyGyroMeanY  - mean of tBodyGyroMeanY by subject and activity    
+tBodyGyroMeanZ  - mean of tBodyGyroMeanZ by subject and activity   
+tBodyGyroStdX  - mean of tBodyGyroStdX by subject and activity    
+tBodyGyroStdY  - mean of tBodyGyroStdY by subject and activity   
+tBodyGyroStdZ  - mean of tBodyGyroStdZ by subject and activity   
+tBodyGyroJerkMeanX - mean of tBodyGyroJerkMeanX by subject and activity
+tBodyGyroJerkMeanY - mean of tBodyGyroJerkMeanY by subject and activity
+tBodyGyroJerkMeanZ - mean of tBodyGyroJerkMeanZ by subject and activity
+tBodyGyroJerkStdX - mean of tBodyGyroJerkStdX by subject and activity
+tBodyGyroJerkStdY - mean of tBodyGyroJerkStdY by subject and activity 
+tBodyGyroJerkStdZ - mean of tBodyGyroJerkStdZ by subject and activity 
+fBodyAccMeanX  - mean of fBodyAccMeanX by subject and activity     
+fBodyAccMeanY  - mean of fBodyAccMeanY by subject and activity      
+fBodyAccMeanZ  - mean of fBodyAccMeanZ by subject and activity    
+fBodyAccStdX  - mean of fBodyAccStdX by subject and activity      
+fBodyAccStdY  - mean of fBodyAccStdY by subject and activity    
+fBodyAccStdZ  - mean of fBodyAccStdZ by subject and activity     
+fBodyAccJerkMeanX  - mean of fBodyAccJerkMeanX by subject and activity
+fBodyAccJerkMeanY  - mean of fBodyAccJerkMeanY by subject and activity
+fBodyAccJerkMeanZ  - mean of fBodyAccJerkMeanZ by subject and activity
+fBodyAccJerkStdX  - mean of fBodyAccJerkStdX by subject and activity 
+fBodyAccJerkStdY  - mean of fBodyAccJerkStdY by subject and activity 
+fBodyAccJerkStdZ  - mean of fBodyAccJerkStdZ by subject and activity 
+fBodyGyroMeanX - mean of fBodyGyroMeanX by subject and activity  
+fBodyGyroMeanY - mean of fBodyGyroMeanY by subject and activity    
+fBodyGyroMeanZ - mean of fBodyGyroMeanZ by subject and activity    
+fBodyGyroStdX - mean of fBodyGyroStdX by subject and activity    
+fBodyGyroStdY - mean of fBodyGyroStdY by subject and activity    
+fBodyGyroStdZ - mean of fBodyGyroStdZ by subject and activity
