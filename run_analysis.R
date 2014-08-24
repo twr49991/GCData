@@ -4,21 +4,18 @@ run_analysis <- function (){
         features <- read.table("features.txt", stringsAsFactors=FALSE)
 
 ## Do some cleanup on the variable names
-        f2 <- as.data.frame(sapply(features, gsub, pattern="[-][m][e][a][n][(][)][-]", replacement="Mean"))
-        f2 <- as.data.frame(sapply(f2, gsub, pattern="[-][m][e][a][n][(][)]", replacement="Mean"))
-        f2 <- as.data.frame(sapply(f2, gsub, pattern="[-][s][t][d][(][)][-]", replacement="Std"))
-        f2 <- as.data.frame(sapply(f2, gsub, pattern="[-][s][t][d][(][)]", replacement="Std"))
+        f2 <- as.data.frame(sapply(features, gsub, pattern="[-][Mm][e][a][n][(][)][-]", replacement="Mean"))
+        f2 <- as.data.frame(sapply(f2, gsub, pattern="[-][Ss][t][d][(][)][-]", replacement="Std"))
 
 ## Merge the X training and test data
         xtrn <- read.table(file="X_train.txt", header=FALSE, col.names = f2[, 2], colClasses="numeric")
         xtst <- read.table(file="X_test.txt", header=FALSE, col.names = f2[, 2], colClasses="numeric")
         xs <- rbind(xtrn, xtst)
 
-## Extract the measurements on the mean and standard deviation for each measurement       
+## Extract the obervations of mean and standard deviation       
 ## NOTE: the grep pattern is now different due to the changes resulting in data frame f2 above
-        xskeep <- xs[, grep("[m][e][a][n]|[s][t][d]", colnames(xs))] #previous code
-# not tested: xskeep <- xs[, grep("[m][e][a][n][.]$|[S][t][d][.]$", colnames(xs))]
-
+        xskeep <- xs[, grep("[M][e][a][n][XYZ]|[S][t][d][XYZ]", colnames(xs))] 
+         
 ## Create a column containing the subject identifiers from training and test       
         subjtrn <- read.table(file="subject_train.txt", colClasses="character")
         subjtst <- read.table(file="subject_test.txt", colClasses="character")
@@ -46,11 +43,6 @@ run_analysis <- function (){
 
 ## Create the tidy data set with the average of each variable for each activity and each subject.
         tidySummary <- ddply(ds, .(Subject, Activity), numcolwise(mean))
-
-## Find the numeric columns in the summary data frame and round all to 4 places
-## This is not required for the assignment, but results in a cleaner-looking text file
-        numerics <- sapply(tidySummary, is.numeric)
-        tidySummary[numerics] <- lapply(tidySummary[numerics], round, digits = 4) 
 
 ## Write the dataset to disk
         write.table(tidySummary, "tidySummary.txt", row.names=FALSE)
